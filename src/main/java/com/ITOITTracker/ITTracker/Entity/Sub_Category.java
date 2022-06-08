@@ -10,20 +10,20 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name="Sub_Category")
-public class Sub_Category{
+public class SubCategory{
 	@Id
-	private int sub_category_id;
-	private String sub_category_msg;
+	private int subCategoryId;
+	private String subCategory_msg;
 	@ManyToOne(fetch = FetchType.LAZY, cascade = {CascadeType.ALL})
 	@JoinColumn(name = "category_id", nullable = false, referencedColumnName = "category_id")
 	private Category category;
 	public Sub_Category(int subCategory_id, String subCategory_msg, Category category) {
 	super();
-	this.sub_category_id = subCategory_id;
+	this.subCategoryId = subCategory_id;
 	this.sub_category_msg = subCategory_msg;
 	this.category = category;
 	}
-	public Sub_Category() {
+	public SubCategory() {
 	super();
 	}
 	public int getSubCategory_id() {
