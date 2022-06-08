@@ -21,7 +21,7 @@ INSERT INTO category (category_id,category_msg)
 VALUES(1,"Hardware"),(2,"Software"),(3,"Access Management");
 
 ----SubCategory
-INSERT INTO sub_category (sub_category_id,sub_category_msg,category_id) 
+INSERT INTO sub_category (subCategoryId,subCategory_msg,category_id) 
 VALUES
 (1,"Allocate Laptop",(SELECT category_id FROM category WHERE category_id =1)),
 (2,"Allocate Hardware",(SELECT category_id FROM category WHERE category_id =1)),
